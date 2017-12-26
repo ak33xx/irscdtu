@@ -206,13 +206,17 @@ $(document).ready(function () {
     if ($("body").hasClass("slider-bg")) {
         $(".hero").vegas({
             transition: "blur",
-            delay: 8000,
+            delay: 3000,
             color: "#D98880",
+						timer: false,
             slides: [
-				{ src: "img/placeholder-slider1.jpg" },
-				{ src: "img/placeholder-slider2.jpg", transition: 'swirlLeft' },
-				{ src: "img/placeholder-slider3.jpg", transition: 'flash' }
-			]
+			 					{ src: "img/placeholder-big.jpg", width: "100%", transition: 'fade' },
+			 					{ src: "img/photo1.jpeg", width: "100%", transition: 'fade' },
+			 					{ src: "img/photo2.jpeg", width: "100%", transition: 'fade' },
+			 					{ src: "img/placeholder-big1.jpeg", width: "100%", transition: 'fade' },
+								{ src: "img/placeholder-slider3.jpg", transition: 'fade' },
+								{ src: "img/placeholder-slider2.jpg", transition: 'slideLeft' },
+						],
         });
         $(".vegas-wrapper").addClass("flex flex-middle");
         $(window).resize(function () {

@@ -757,6 +757,7 @@ img.centered {
   background: #D98880 none repeat scroll 0% 0%;
   transition: width 0s ease-out 0s;
 }
+
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .main {
@@ -768,7 +769,7 @@ img.centered {
 }
 .section {
   position: relative;
-  padding: 6em 0;
+  padding: 2em 0;
   background: #fff none repeat scroll 0 0;
   z-index: 1;
   border-bottom: 1px solid #f4f6f6;
@@ -1036,7 +1037,7 @@ img.centered {
   padding: 6px 24px;
 }
 @media (min-width: 768px) {
-  
+
 }
 /* Testimonials
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1343,8 +1344,8 @@ img.centered {
   top: 0;
   bottom: 0;
   border: medium none;
-  height: 3em;
-  margin: auto 1em;
+  height: 1em;
+  margin: auto 0.5em;
   background: transparent none repeat scroll 0% 0%;
   color: #FFF;
   font-size: 2em;
@@ -1591,8 +1592,3 @@ img.centered {
 .card-404 {
   color: #626567;
 }
-
-
-
-
-
