@@ -702,6 +702,10 @@ img.centered {
 }
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#Hmessage {
+  display: none;
+}
+
 .header {
   position: relative;
   width: 100%;

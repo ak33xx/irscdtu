@@ -213,11 +213,15 @@ $(document).ready(function () {
 			 					{ src: "img/placeholder-big.jpg", width: "100%", transition: 'fade' },
 			 					{ src: "img/photo1.jpeg", width: "100%", transition: 'fade' },
 			 					{ src: "img/photo2.jpeg", width: "100%", transition: 'fade' },
-			 					{ src: "img/placeholder-big1.jpeg", width: "100%", transition: 'fade' },
-								{ src: "img/placeholder-slider3.jpg", transition: 'fade' },
-								{ src: "img/placeholder-slider2.jpg", transition: 'slideLeft' },
+								{ src: "img/placeholder-slider2.jpg", transition: 'slideLeft' }
 						],
+						// end: function(){
+						// 	$("#Hmessage").show();
+						// }
         });
+				$("body").on('click',function(){
+					$(".hero").vegas('toggle');
+				})
         $(".vegas-wrapper").addClass("flex flex-middle");
         $(window).resize(function () {
             var wHeight = $(window).height();
