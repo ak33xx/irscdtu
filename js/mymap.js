@@ -26,7 +26,7 @@ var styles = [
 
 $("#mymap").gmap3({
     marker: {
-        address: '795 Folsom Ave, San Francisco, CA 94107',
+        address: 'DTU, Shahbad Daulatpur, Main Bawana Road, Delhi, 110042',
         data: "Here I am",
 		events: {
 			mouseover: function (marker, event, context) {
