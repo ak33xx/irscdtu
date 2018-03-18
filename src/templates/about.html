@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>About | IRSC | DTU</title>
-        <meta name="description" content="HTML5 Landing Page Template">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Filip Greksa">
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+        {% block title %}About | IRSC | DTU{% endblock %}
 
-        <!-- FONTS -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,700,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/entypo.css">
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="img/favicon.png">
-
-        <script src="js/vendor/modernizr.js"></script>
-
-    </head>
+{% block content %}
     <body class="about">
 
         <!-- Preloader -->
@@ -38,16 +16,16 @@
         <nav class="navbar navbar-burger navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">IRSC DELTECH</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">IRSC DELTECH</a>
                     <span class="sr-only">Toggle navigation</span>
                     <button class="icon icon-menu burger-menu"></button>
                 </div>
                 <div class="menu-wrapper">
                     <div class="overlay-menu flex flex-middle">
                         <ul class="navigation" role="menubar">
-                            <li role="menuitem"><a href="index.html">Home</a></li>
-                            <li role="menuitem"><a href="about.html">About</a></li>
-                            <li role="menuitem"><a href="contact.html">Contact</a></li>
+                          <li role="menuitem"><a href="{% url 'home' %}">Home</a></li>
+                          <li role="menuitem"><a href="{% url 'about' %}">About</a></li>
+                          <li role="menuitem"><a href="{% url 'contact' %}">Contact</a></li>
 
                         </ul>
                     </div>
@@ -207,7 +185,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/Divyanshu Singh.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/Divyanshu Singh.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/divyanshu.singh.4236" target="_blank" class="icon icon-facebook"></a></li>
@@ -226,7 +204,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/aishwarykumar.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/aishwarykumar.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/aishwarykumar.tiwari.3" target="_blank" class="icon icon-facebook"></a></li>
@@ -245,7 +223,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/gulasnani.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/gulasnani.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/gul.asnani.90" target="_blank" class="icon icon-facebook"></a></li>
@@ -265,7 +243,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/jaggi.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/jaggi.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://m.facebook.com/Dorkasauroustyrannianiac" target="_blank" class="icon icon-facebook"></a></li>
@@ -290,7 +268,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/MayankArya.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/MayankArya.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/mayank.arya.568" target="_blank" class="icon icon-facebook"></a></li>
@@ -309,7 +287,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/ashishkumar.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/ashishkumar.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/profile.php?id=100014838528978" target="_blank" class="icon icon-facebook"></a></li>
@@ -328,7 +306,7 @@
                                 <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/ajackson.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/ajackson.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/anchit.gulati.98" target="_blank" class="icon icon-facebook"></a></li>
@@ -347,7 +325,7 @@
 								                                <div class="card">
                                     <div class="card-media">
                                         <figure class="figure">
-                                            <img src="img/thumbs/member3.jpg" alt="customer" />
+                                            <img src="{% static 'img/thumbs/member3.jpg' %}" alt="customer" />
                                             <figcaption class="overlay flex flex-middle flex-center">
                                                 <ul class="social-list">
                                                     <li><a href="https://www.facebook.com/rajyavardhan.singh.75" target="_blank" class="icon icon-facebook"></a></li>
@@ -398,20 +376,4 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/bootstrap.min.js"></script>
-
-        <script src="js/vendor/jquery.appear.js"></script>
-        <script src="js/vendor/slick.min.js"></script>
-        <script src="js/vendor/jquery.countTo.js"></script>
-        <script src="js/vendor/jquery.parallax.min.js"></script>
-        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-    </body>
-</html>
+{% endblock %}

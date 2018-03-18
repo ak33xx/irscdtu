@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>IRSC | DTU</title>
-        <meta name="description" content="HTML5 Landing Page Template">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Filip Greksa">
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+        {% block title %}IRSC | DTU{% endblock %}
+        {% block vegas %}<link rel="stylesheet" href="{% static 'css/vegas.min.css' %}">{% endblock %}
 
-        <!-- FONTS -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,700,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/entypo.css">
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/vegas.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="img/favicon.png">
-
-        <script src="js/vendor/modernizr.js"></script>
-
-    </head>
+{% block content %}
     <body class="slider-bg">
 
         <!-- Preloader -->
@@ -39,16 +17,16 @@
         <nav class="navbar navbar-burger navbar-fixed-top is-transparent" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index-slider.html">IRSC DELTECH</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">IRSC DELTECH</a>
                     <span class="sr-only">Toggle navigation</span>
                     <button class="icon icon-menu burger-menu"></button>
                 </div>
                 <div class="menu-wrapper">
                     <div class="overlay-menu flex flex-middle">
                         <ul class="navigation" role="menubar">
-                            <li role="menuitem"><a href="index.html">Home</a></li>
-                            <li role="menuitem"><a href="about.html">About</a></li>
-                            <li role="menuitem"><a href="contact.html">Contact</a></li>
+                            <li role="menuitem"><a href="{% url 'home' %}">Home</a></li>
+                            <li role="menuitem"><a href="{% url 'about' %}">About</a></li>
+                            <li role="menuitem"><a href="{% url 'contact' %}">Contact</a></li>
 
                         </ul>
                     </div>
@@ -80,9 +58,6 @@
 
         <!-- Content -->
         <main class="main" role="main">
-
-
-
             <!-- Features -->
             <!-- <section class="section text-center">
                 <div class="container">
@@ -111,9 +86,6 @@
                     </div>
                 </div>
             </section> -->
-
-
-
             <!-- Fun Facts / Counters -->
             <!-- <section class="section counters">
                 <div class="container">
@@ -139,7 +111,6 @@
                     </div>
                 </div>
             </section> -->
-
             <!-- Features / Left Image -->
             <!-- <section class="section features">
                 <div class="container">
@@ -159,7 +130,6 @@
                     </div>
                 </div>
             </section> -->
-
             <!-- Features / Right Image -->
             <!-- <section class="section features">
                 <div class="container">
@@ -178,9 +148,6 @@
                     </div>
                 </div>
             </section> -->
-
-
-
             <!-- Video
             <section class="section video-section flex flex-middle text-center">
                 <div class="container">
@@ -196,13 +163,6 @@
                     </div>
                 </div>
             </section>-->
-
-
-
-
-
-
-
             <!-- Call To Action -->
             <!-- <section class="section">
                 <div class="container">
@@ -221,7 +181,6 @@
                     </div>
                 </div>
             </section> -->
-
             <!-- Testimonials -->
             <!-- <section class="section testimonials text-center">
                 <div class="container">
@@ -244,7 +203,6 @@
                     </div>
                 </div>
             </section> -->
-
             <!-- Call To Action / Download -->
             <!-- <section class="section download-app">
                 <div class="container">
@@ -266,9 +224,7 @@
                     </div>
                 </div>
             </section> -->
-
         <!-- </main> -->
-
         <!-- Footer -->
         <footer class="footer" role="contentinfo">
             <div class="container">
@@ -290,24 +246,9 @@
                 </div>
             </div>
         </footer>
+{% endblock %}
         <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/bootstrap.min.js"></script>
 
-        <script src="js/vendor/jquery.appear.js"></script>
-        <script src="js/vendor/slick.min.js"></script>
-        <script src="js/vendor/jquery.countTo.js"></script>
-        <script src="js/vendor/jquery.parallax.min.js"></script>
-        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
         <!-- Background slider -->
-        <script src="js/vendor/vegas.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-
-
-
-    </body>
-</html>
+        {% block vegasjs %}<script src="{% static 'js/vendor/vegas.min.js' %}"></script>{% endblock %}
