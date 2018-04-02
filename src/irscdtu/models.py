@@ -6,5 +6,6 @@ class Report(models.Model):
 	email = models.CharField(max_lenght=150)
 	report = models.CharField(max_lenght=500)
 	
-	def get_absolute_url(self):
-	return reverse(
+	def __str__(self):
+	return self.email
+
