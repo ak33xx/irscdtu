@@ -224,7 +224,7 @@
                     </div>
                 </div>
             </section> -->
-			
+
 			            <!-- Contact Form / Address -->
             <section class="section contact">
                 <div class="container">
@@ -239,6 +239,7 @@
                             <!-- Contact Form -->
                             <article class="contact-form">
                                 <form action="" id="contact-form" role="form" method="POST">
+                                  {% csrf_token %}
                                     <div class="alert alert-success hidden" id="contact-alert-success">
                                         <strong>Success!</strong> Thank you for your message. Reply will be in a while!
                                     </div>

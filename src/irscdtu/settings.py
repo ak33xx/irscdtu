@@ -123,3 +123,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets')
 ]
+
+ADMINS = (
+    ('Gul', 'gulasnani7@gmail.com'),
+)
+
+FROM_EMAIL = ADMINS[0][1]
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = FROM_EMAIL
+EMAIL_HOST_PASSWORD = 'Gul@0703'
+EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True

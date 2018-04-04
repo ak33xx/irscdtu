@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.urls import reverse
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 
 from . import models
+from . import forms
 
 # Create your views here.
 def send_email(request):
@@ -16,10 +18,10 @@ def send_email(request):
                     send_mail(
                         form.cleaned_data['subject'],
                         form.cleaned_data['message'],
-                        None,
-                        p.email_id
+                        "gulasnani7@gmail.com",
+                        [p.email_id]
                     )
                 except BadHeaderError:
                     return HttpResponse('Invalid header found.')
             return HttpResponseRedirect(reverse('mailform'))
-    return render(request, 'mail_form.html', {'form': form})
+    return render(request, 'newsletter/mail_form.html', {'form': form})

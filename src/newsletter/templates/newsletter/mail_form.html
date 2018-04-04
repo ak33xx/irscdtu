@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+{% block title %}
+  Mail Form | IRSC DTU
+{% endblock %}
+
+{% block content %}
+  <form method="POST" action="">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" class="button">
+  </form>
+{% endblock %}
