@@ -45,7 +45,7 @@
                         </hgroup>
                         <div class="btn-duo">
 
-                            <button class="btn btn-default rounded" role="button">Join Us</button>
+                            <button class="btn btn-default rounded" role="button" href="#form">Join Us</button>
                         </div>
                         <br><br>
                         <div>
@@ -227,7 +227,7 @@
 
 			            <!-- Contact Form / Address -->
             <section class="section contact">
-                <div class="container">
+                <div class="container" id="form">
                     <div class="row">
                         <div class="col-md-12">
                             <hgroup class="title-group text-center">
@@ -238,7 +238,7 @@
                         <div class="col-md-8 col-md-offset-2">
                             <!-- Contact Form -->
                             <article class="contact-form">
-                                <form action="" id="contact-form" role="form" method="POST">
+                                <form action="{% url 'report:report' %}" id="contact-form" role="form" method="POST">
                                   {% csrf_token %}
                                     <div class="alert alert-success hidden" id="contact-alert-success">
                                         <strong>Success!</strong> Thank you for your message. Reply will be in a while!

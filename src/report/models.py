@@ -1,7 +1,4 @@
-from django.contrib import admin
-from django.core.urlresolver import reverse
 from django.db import models
-
 
 class Report(models.Model):
 	name = models.CharField(max_length=100)

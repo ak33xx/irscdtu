@@ -22,6 +22,7 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^newsletter/', include('newsletter.urls', namespace='newsletter')),
+    url(r'^report/', include('report.urls', namespace='report')),
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.about, name='about'),
     url(r'^contact/$', views.contact, name='contact'),

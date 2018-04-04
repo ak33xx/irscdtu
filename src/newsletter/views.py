@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from . import models
 from . import forms
 
 # Create your views here.
+@login_required
 def send_email(request):
     form = forms.MailForm()
     if request.method == 'POST':
