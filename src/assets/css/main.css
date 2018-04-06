@@ -1596,3 +1596,14 @@ img.centered {
 .card-404 {
   color: #626567;
 }
+
+
+/* Mail Form
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#mailer {
+  padding-top: 50px;
+}
+
+.mailer-form p label{
+  display: block;
+}

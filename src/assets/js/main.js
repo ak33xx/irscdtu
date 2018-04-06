@@ -210,10 +210,10 @@ $(document).ready(function () {
             color: "#D98880",
 						timer: false,
             slides: [
-			 					{ src: "img/placeholder-big.jpg", width: "100%", transition: 'fade' },
-			 					{ src: "img/photo1.jpeg", width: "100%", transition: 'fade' },
-			 					{ src: "img/photo2.jpeg", width: "100%", transition: 'fade' },
-								{ src: "img/placeholder-slider2.jpg", transition: 'slideLeft' }
+			 					{ src: "static/img/placeholder-big.jpg", width: "100%", transition: 'fade' },
+			 					{ src: "static/img/photo1.jpeg", width: "100%", transition: 'fade' },
+			 					{ src: "static/img/photo2.jpeg", width: "100%", transition: 'fade' },
+								{ src: "static/img/placeholder-slider2.jpg", transition: 'slideLeft' },
 						],
 						// end: function(){
 						// 	$("#Hmessage").show();

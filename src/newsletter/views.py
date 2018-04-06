@@ -19,11 +19,28 @@ def send_email(request):
                 try:
                     send_mail(
                         form.cleaned_data['subject'],
-                        form.cleaned_data['message'],
+                        'Hi {} !\n\n'.format(p.name) + form.cleaned_data['message'],
                         "gulasnani7@gmail.com",
                         [p.email_id]
                     )
                 except BadHeaderError:
                     return HttpResponse('Invalid header found.')
-            return HttpResponseRedirect(reverse('mailform'))
+            return HttpResponseRedirect(reverse('newsletter:send_email'))
     return render(request, 'newsletter/mail_form.html', {'form': form})
+
+def save_visitor(request):
+    if(request.method == 'POST'):
+        person = models.MailTo()
+        person.name = request.POST.get("name")
+        person.email_id = request.POST.get("email")
+        person.save()
+        try:
+            send_mail(
+                "IRSC DTU | Signup for newsletter",
+                'Hi {} !\n\n'.format(person.name) + "Thank you for signing up for our newsletter. We promise you regular updates on road safety, be them new or prevalent laws on the same, or be them awareness programs in your neighbourhood. We'll be glad to also share with you our own initiatives and campaigns, and how you can be a part of something so crucial to the society.\n\nRegards,\nIRSC DTU",
+                "gulasnani7@gmail.com",
+                [person.email_id]
+            )
+        except BadHeaderError:
+            return HttpResponse('Invalid header found.')
+    return render(request, "index.html")

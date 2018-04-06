@@ -6,9 +6,40 @@
 {% endblock %}
 
 {% block content %}
-  <form method="POST" action="">
+<div id="mailer" class="container">
+  <div class="preloader flex flex-middle flex-center">
+      <div class="wrapper">
+          <div class="loader"></div>
+      </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-burger navbar-fixed-top is-transparent" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'home' %}">IRSC DELTECH</a>
+              <span class="sr-only">Toggle navigation</span>
+              <button class="icon icon-menu burger-menu"></button>
+          </div>
+          <div class="menu-wrapper">
+              <div class="overlay-menu flex flex-middle">
+                  <ul class="navigation" role="menubar">
+                      <li role="menuitem"><a href="{% url 'home' %}">Home</a></li>
+                      <li role="menuitem"><a href="{% url 'about' %}">About</a></li>
+                      <li role="menuitem"><a href="{% url 'contact' %}">Contact</a></li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <hr>
+  <h2>Welcome administrator!</h2>
+  <h4>Fill in the subject and message of the mail to be sent to the subscribers of your newsletter.</h4>
+  <form method="POST" action="" class="mailer-form">
     {{ form.as_p }}
     {% csrf_token %}
-    <input type="submit" class="button">
+    <input type="submit" class="btn btn-submit">
   </form>
+</div>
 {% endblock %}

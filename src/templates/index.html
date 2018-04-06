@@ -45,7 +45,7 @@
                         </hgroup>
                         <div class="btn-duo">
 
-                            <button class="btn btn-default rounded" role="button" href="#form">Join Us</button>
+                            <a href="#form"><button class="btn btn-default rounded" role="button">Join Us</button></a>
                         </div>
                         <br><br>
                         <div>
@@ -226,8 +226,8 @@
             </section> -->
 
 			            <!-- Contact Form / Address -->
-            <section class="section contact">
-                <div class="container" id="form">
+            <section class="section contact" id="form">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <hgroup class="title-group text-center">
@@ -275,6 +275,38 @@
                     </div>
                 </div>
             </section>
+
+        {% if user.is_authenticated %}
+          <hr>
+          <div class="container">
+            <div class="row justify-content-end" style="padding: 0 500px">
+              <a href="{% url 'newsletter:send_email' %}" class="btn btn-default rounded">Add people to the mailing list</a>
+            </div>
+          </div>
+          <hr>
+        {% else %}
+          <div class="container">
+            <form action="{% url 'newsletter:visitor' %}" role="form" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3>Keep yourself updated with road safety developments and get regular information on personal safety!</h3>
+                  <h4>Sign up for our newsletter</h4><hr>
+                  <div class="form-group col-sm-6">
+                      <label class="sr-only" for="name"></label>
+                      <input type="text" class="form-control" value="" placeholder="Name" data-msg-required="Please enter your name." name="name" id="name">
+                  </div>
+                  <div class="form-group col-sm-6">
+                      <label class="sr-only" for="email"></label>
+                      <input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." class="form-control" name="email" id="email">
+                  </div>
+                </div>
+              </div>
+              <input type="submit" value="Sign up" class="btn btn-submit" data-loading-text="Loading..." style="margin:0 0% 10px 92%;">
+              <br>
+            </form>
+          </div>
+        {% endif %}
 
         <!-- </main> -->
         <!-- Footer -->
