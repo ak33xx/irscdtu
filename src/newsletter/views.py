@@ -20,7 +20,7 @@ def send_email(request):
                     send_mail(
                         form.cleaned_data['subject'],
                         'Hi {} !\n\n'.format(p.name) + form.cleaned_data['message'],
-                        "gulasnani7@gmail.com",
+                        "solvedtu@gmail.com",
                         [p.email_id]
                     )
                 except BadHeaderError:
@@ -38,7 +38,7 @@ def save_visitor(request):
             send_mail(
                 "IRSC DTU | Signup for newsletter",
                 'Hi {} !\n\n'.format(person.name) + "Thank you for signing up for our newsletter. We promise you regular updates on road safety, be them new or prevalent laws on the same, or be them awareness programs in your neighbourhood. We'll be glad to also share with you our own initiatives and campaigns, and how you can be a part of something so crucial to the society.\n\nRegards,\nIRSC DTU",
-                "gulasnani7@gmail.com",
+                "solvedtu@gmail.com",
                 [person.email_id]
             )
         except BadHeaderError:
